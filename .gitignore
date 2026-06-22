@@ -1,0 +1,36 @@
+# ── Obsidian ──────────────────────────────────────────────
+# Ignore the entire Obsidian config folder. This is the safest
+# default: it guarantees that secrets — such as the Local REST API
+# key stored in
+#   .obsidian/plugins/obsidian-local-rest-api/data.json
+# — are never committed to the repository.
+#
+# If you later decide you want to version some of your Obsidian
+# settings, you can selectively un-ignore files here. But NEVER
+# un-ignore plugin data files that contain API keys or tokens.
+.obsidian/
+
+# Extra safety net: explicitly ignore the Local REST API key file,
+# even if parts of .obsidian/ are ever tracked.
+.obsidian/plugins/obsidian-local-rest-api/data.json
+
+# Common secret/credential files
+*.pem
+*.key
+.env
+.env.*
+
+# ── MCP / Claude config (may contain API keys in plaintext) ──
+# Project-scoped MCP server config and local Claude settings can
+# embed bearer tokens (e.g. the Local REST API key). Keep them out
+# of version control. If you ever want to share a secret-free
+# .mcp.json, use ${ENV_VAR} substitution and un-ignore it.
+.mcp.json
+.claude/settings.local.json
+
+# ── OS / editor cruft ─────────────────────────────────────
+.DS_Store
+Thumbs.db
+.trash/
+*.swp
+*~
