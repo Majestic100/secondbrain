@@ -1,0 +1,28 @@
+# ── Obsidian ──────────────────────────────────────────────
+# Ignore the entire Obsidian config folder. This is the safest
+# default: it guarantees that secrets — such as the Local REST API
+# key stored in
+#   .obsidian/plugins/obsidian-local-rest-api/data.json
+# — are never committed to the repository.
+#
+# If you later decide you want to version some of your Obsidian
+# settings, you can selectively un-ignore files here. But NEVER
+# un-ignore plugin data files that contain API keys or tokens.
+.obsidian/
+
+# Extra safety net: explicitly ignore the Local REST API key file,
+# even if parts of .obsidian/ are ever tracked.
+.obsidian/plugins/obsidian-local-rest-api/data.json
+
+# Common secret/credential files
+*.pem
+*.key
+.env
+.env.*
+
+# ── OS / editor cruft ─────────────────────────────────────
+.DS_Store
+Thumbs.db
+.trash/
+*.swp
+*~
